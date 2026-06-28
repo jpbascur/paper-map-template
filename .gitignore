@@ -1,0 +1,16 @@
+viewer/*.csv
+google_cloud_prototype/data/*.csv
+!viewer/map_points.sample.csv
+!google_cloud_prototype/data/paperdata.csv
+!google_cloud_prototype/data/coordinates_15.csv
+!google_cloud_prototype/data/coordinates_25.csv
+!google_cloud_prototype/data/coordinates_50.csv
+!google_cloud_prototype/data/coordinates_100.csv
+!google_cloud_prototype/data/coordinates_200.csv
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+*.parquet
+*.jsonl
+*.env
+.claude/

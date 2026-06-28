@@ -1,0 +1,281 @@
+:root {
+  color-scheme: dark;
+  --bg: #111315;
+  --panel: #191c20;
+  --panel-2: #22262b;
+  --text: #f2f4f5;
+  --muted: #aeb5bd;
+  --line: #343a42;
+  --accent: #8bd3ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  height: 100vh;
+  min-height: 620px;
+  overflow: hidden;
+}
+
+#map {
+  position: relative;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #303236;
+}
+
+#map canvas {
+  display: block;
+  cursor: default;
+}
+
+.deck-tooltip {
+  max-width: 360px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  pointer-events: none;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: auto;
+  border-left: 1px solid var(--line);
+  background: var(--panel);
+  padding: 18px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+#status,
+#details p,
+dd {
+  color: var(--muted);
+}
+
+#status {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.control,
+.file-control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label,
+.file-control span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="number"],
+select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #0f1113;
+  color: var(--text);
+  padding: 9px 10px;
+}
+
+input[type="file"] {
+  color: var(--muted);
+}
+
+button {
+  border: 1px solid #3f7c9d;
+  border-radius: 6px;
+  background: #173347;
+  color: var(--text);
+  cursor: pointer;
+  padding: 9px 12px;
+}
+
+button:hover {
+  background: #1d4058;
+}
+
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.button-row button {
+  padding: 8px 6px;
+}
+
+.check-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: none;
+}
+
+.check-control input {
+  width: 16px;
+  height: 16px;
+}
+
+#results {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 220px;
+  overflow: auto;
+}
+
+.result {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel-2);
+  color: var(--text);
+  cursor: pointer;
+  padding: 8px;
+  text-align: left;
+}
+
+.result strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.result span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.legend-bar {
+  height: 10px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #2c7bb6, #31a3a9, #35b779, #8bd548, #fde725);
+}
+
+.legend-labels {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.year-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.year-inputs label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 6px 10px;
+  margin: 0;
+}
+
+dt {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+}
+
+#details p {
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  #app {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(360px, 60vh) minmax(320px, 40vh);
+  }
+
+  #sidebar {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}

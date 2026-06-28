@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dutch Paper Map</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="map"></section>
+
+      <aside id="sidebar">
+        <header>
+          <h1>Dutch Paper Map</h1>
+          <p id="status">Load a map CSV to begin.</p>
+        </header>
+
+        <label class="file-control">
+          <span>CSV file</span>
+          <input id="fileInput" type="file" accept=".csv,text/csv" />
+        </label>
+
+        <div class="control">
+          <label for="dataUrl">Data URL</label>
+          <div class="row">
+            <input id="dataUrl" type="text" value="./map_points.sample.csv" />
+            <button id="loadUrl">Load</button>
+          </div>
+        </div>
+
+        <div class="control">
+          <label for="searchInput">Search papers</label>
+          <input id="searchInput" type="search" placeholder="Title or work ID" />
+          <div id="results"></div>
+        </div>
+
+        <div class="control">
+          <label>View</label>
+          <div class="button-row">
+            <button id="zoomIn" type="button">Zoom In</button>
+            <button id="zoomOut" type="button">Zoom Out</button>
+            <button id="resetView" type="button">Reset</button>
+          </div>
+          <label class="check-control">
+            <input id="tooltipToggle" type="checkbox" />
+            <span>Show hover tooltips</span>
+          </label>
+        </div>
+
+        <div class="legend">
+          <div class="legend-bar"></div>
+          <div class="legend-labels">
+            <span id="yearMin">Older</span>
+            <span id="yearMax">Newer</span>
+          </div>
+          <div class="year-inputs">
+            <label>
+              <span>Min year</span>
+              <input id="yearMinInput" type="number" step="1" />
+            </label>
+            <label>
+              <span>Max year</span>
+              <input id="yearMaxInput" type="number" step="1" />
+            </label>
+          </div>
+        </div>
+
+        <article id="details">
+          <h2>No paper selected</h2>
+          <dl>
+            <dt>Work ID</dt>
+            <dd>-</dd>
+            <dt>Publication</dt>
+            <dd>-</dd>
+          </dl>
+          <p></p>
+        </article>
+      </aside>
+    </main>
+
+    <script src="https://unpkg.com/@deck.gl/core@8.9.36/dist.min.js"></script>
+    <script src="https://unpkg.com/@deck.gl/layers@8.9.36/dist.min.js"></script>
+    <script src="https://unpkg.com/d3-dsv@3.0.1/dist/d3-dsv.min.js"></script>
+    <script src="./app.js?v=deck-9"></script>
+  </body>
+</html>

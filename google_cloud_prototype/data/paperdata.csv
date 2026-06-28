@@ -1,0 +1,6 @@
+work_id,publication_year,title,abstract
+1,2020,Sample paper about embeddings,This is a tiny public sample row for testing the viewer.
+2,2021,Sample paper about maps,This row demonstrates another paper with metadata.
+3,2022,Sample paper about networks,This row gives the scatterplot a third point.
+4,2023,Sample paper about search,This row can be found through title search.
+5,2024,Sample paper about deployment,This row helps verify year coloring.

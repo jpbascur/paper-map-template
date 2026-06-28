@@ -1,0 +1,6 @@
+work_id,x,y,publication_year,title
+1,-2.0,-1.0,2020,Sample paper about embeddings
+2,-1.0,1.0,2021,Sample paper about maps
+3,0.0,0.2,2022,Sample paper about networks
+4,1.2,1.1,2023,Sample paper about search
+5,2.0,-0.8,2024,Sample paper about deployment
