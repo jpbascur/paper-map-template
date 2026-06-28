@@ -22,6 +22,13 @@ cd google_cloud_prototype
 python -m http.server 8080
 ```
 
+If `python` is not on your PATH but Node.js is installed:
+
+```powershell
+cd google_cloud_prototype
+npx http-server -p 8080
+```
+
 Open:
 
 ```text
