@@ -4,3 +4,8 @@ work_id,publication_year,title,abstract
 3,2022,Sample paper about networks,This row gives the scatterplot a third point.
 4,2023,Sample paper about search,This row can be found through title search.
 5,2024,Sample paper about deployment,This row helps verify year coloring.
+6,2024,Sample paper about reproducibility,This row pairs with the included demo embedding file.
+7,2025,Sample paper about UMAP,This row demonstrates generated map coordinates.
+8,2025,Sample paper about visualization,This row is part of the public demo dataset.
+9,2020,Sample paper about semantic similarity,This row clusters near another embedding example.
+10,2021,Sample paper about static hosting,This row helps test the hosted viewer workflow.

@@ -8,6 +8,7 @@ It contains:
 - a simple CSV-loading viewer in `viewer/`
 - a Dutch OpenAlex example extractor in `get_dutch_papers.sql`
 - a SPECTER2 embedding notebook in `dutch_embeddings.ipynb`
+- a UMAP coordinate generator in `tools/generate_umap_coordinates.py`
 - Google Cloud Storage deployment scripts in `cloud/`
 - tiny sample CSVs so the prototype can run immediately
 
@@ -61,6 +62,36 @@ work_id,x,y
 ```
 
 The `work_id` values must match between metadata and coordinate files.
+
+## Regenerate Demo Coordinates
+
+Install dependencies:
+
+```powershell
+pip install -r requirements.txt
+```
+
+Generate coordinate CSVs from the included demo embeddings:
+
+```powershell
+python tools\generate_umap_coordinates.py
+```
+
+That reads:
+
+```text
+sample_data/demo_embeddings.csv
+```
+
+and rewrites:
+
+```text
+google_cloud_prototype/data/coordinates_15.csv
+google_cloud_prototype/data/coordinates_25.csv
+google_cloud_prototype/data/coordinates_50.csv
+google_cloud_prototype/data/coordinates_100.csv
+google_cloud_prototype/data/coordinates_200.csv
+```
 
 ## Adapt It
 

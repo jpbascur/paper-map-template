@@ -24,6 +24,25 @@ GCS_OUTPUT = 'gs://YOUR_BUCKET/dutch_embeddings/'
 
 The notebook writes SPECTER2 embeddings as Parquet parts.
 
+## Coordinates
+
+Convert embeddings to UMAP coordinates with:
+
+```powershell
+pip install -r requirements.txt
+python tools\generate_umap_coordinates.py `
+  --embeddings ".\path\to\your_embeddings.csv" `
+  --output-dir ".\google_cloud_prototype\data"
+```
+
+The coordinate generator expects a CSV with:
+
+```text
+work_id,embedding
+```
+
+where `embedding` is a JSON-like list of numbers.
+
 ## Viewer Data
 
 The cloud prototype expects these files:

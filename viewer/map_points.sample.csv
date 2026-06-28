@@ -4,3 +4,8 @@ work_id,x,y,publication_year,title
 3,0.0,0.2,2022,Sample paper about networks
 4,1.2,1.1,2023,Sample paper about search
 5,2.0,-0.8,2024,Sample paper about deployment
+6,1.8,-0.5,2024,Sample paper about reproducibility
+7,0.3,-1.5,2025,Sample paper about UMAP
+8,0.6,-1.3,2025,Sample paper about visualization
+9,-1.8,-0.7,2020,Sample paper about semantic similarity
+10,-1.6,-0.4,2021,Sample paper about static hosting

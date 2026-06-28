@@ -26,7 +26,32 @@ Run the notebook in Colab with a GPU runtime. It writes SPECTER2 embedding Parqu
 
 ## 3. Reduce To Map Coordinates
 
-Run your UMAP workflow over the embeddings and export coordinate files for the map. The viewer expects:
+Use the included UMAP script to turn embeddings into viewer coordinates.
+
+For the included demo embeddings:
+
+```powershell
+pip install -r requirements.txt
+python tools\generate_umap_coordinates.py
+```
+
+For your own embeddings CSV:
+
+```powershell
+python tools\generate_umap_coordinates.py `
+  --embeddings ".\path\to\your_embeddings.csv" `
+  --output-dir ".\google_cloud_prototype\data"
+```
+
+The input embeddings CSV must include:
+
+```text
+work_id,embedding
+```
+
+where `embedding` is a JSON-like list of numbers.
+
+The output coordinate files contain:
 
 ```text
 work_id,x,y
